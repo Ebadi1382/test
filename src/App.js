@@ -15,6 +15,7 @@ import Comments from "./components/Comments";
 function App() {
   console.log("changes in github")
   console.log("test branch")
+  console.log("conflict in github")
   return (
     <div className="App">
       <Header />
