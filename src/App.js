@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Container, Row, Spinner } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { numberAction, commentsAction, editName } from "./redux/action";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Notfound from "./components/Notfound";
+import Users from "./components/Users";
+import Posts from "./components/Posts";
+import Comments from "./components/Comments";
 
 function App() {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/users/:id" element={<Posts />} />
+        <Route path="/users/:id/:postId" element={<Comments />} />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,9 @@
+export const usersLoading = "usersLoading";
+export const usersSuccess = "usersSuccess";
+export const usersFailed = "usersFailed";
+export const postsLoading = "postsLoading";
+export const postsSuccess = "postsSuccess";
+export const postsFailed = "postsFailed";
+export const commentsLoading = "commentsLoading";
+export const commentsSuccess = "commentsSuccess";
+export const commentsFailed = "commentsFailed";
