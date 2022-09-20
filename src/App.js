@@ -16,6 +16,7 @@ function App() {
   console.log("changes in github")
   console.log("test branch")
   console.log("conflict in github")
+  console.log("onflict in local")
   return (
     <div className="App">
       <Header />
